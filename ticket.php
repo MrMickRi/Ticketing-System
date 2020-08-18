@@ -261,12 +261,6 @@ $id = intval($_GET['id']);
           ?>
         </div>
     </div>
-    
-
-
-        
-
-
 <! -- Footer -->
 <div  class="bg-dark text-white-50 fixed-bottom" style="margin-top:15px"> 
 	<footer  class="container py-2 d-none d-sm-block">
