@@ -79,7 +79,7 @@ $id = intval($_GET['id']);
            }
            ?>
         </ul>
-        <form class="form-inline mt-2 mt-md-0" action="logout.php">
+        <form class="form-inline mt-2 mt-md-0" action="../logout.php">
           <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>
         </form>
       </div>
