@@ -56,7 +56,7 @@ require_once "config.php";
            <!--control panel only visible for admin-->
            <?php if(($_SESSION['acc_type']) == "admin"){ 
             Echo "<li class='nav-item'>";
-            Echo "<a class='nav-link' href='*.php'>Control Panel</a>";
+            Echo "<a class='nav-link' href='ControlPanel.php'>Control Panel</a>";
             Echo "</li>";
            }
            ?>

@@ -2,7 +2,7 @@
 // Initialize the session
 session_start();
 //Authethication Function ( If User is NOT logged in , Go to login.php)
-require_once "Auth.php";
+
 //Config file
 require_once "config.php";
 // Close connection
@@ -74,10 +74,7 @@ require_once "config.php";
     <br>
 
       <div  class="mx-auto" style="width: 500px;">
-        <p> orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+        <p> Control Panel</p> 
       </div>
   </div>
 

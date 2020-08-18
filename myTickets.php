@@ -5,7 +5,6 @@ session_start();
 require_once "Auth.php";
 // Include config file
 require_once "config.php";
-
 // Close connection
     mysqli_close($link);
 ?>
@@ -82,11 +81,14 @@ require_once "config.php";
       <?php
       $link=mysqli_connect("localhost","root","","ticketsystem");
        // Check connection
+      
+      
       if (mysqli_connect_errno())
       {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
       }
-          $result = mysqli_query($link,"SELECT * FROM tickets LEFT JOIN users on tickets.submitter = users.id;");
+      $user = $_SESSION['username'];
+          $result = mysqli_query($link,"SELECT * FROM tickets LEFT JOIN users on tickets.submitter = users.id where Assigned_Agent = '$user';");
 
           Echo  "<table class='table table-sm'>";
           Echo      "<thead>";
@@ -113,13 +115,11 @@ require_once "config.php";
           echo "<td>" . $row['SLA'] . "</td>";
           echo "<td>" . $row['Assigned_Agent'] . "</td>";
           if((($_SESSION['acc_type']) == 'admin') || (($_SESSION['acc_type']) == 'agent')){ 
-            echo "<td>  <a href=take_ownership.php\?id={$row['ticket_id']}>Ownership</a></td>";
-            }
+          echo "<td>  <a href=take_ownership.php\?id={$row['ticket_id']}>Ownership</a></td>";
+          }
           echo "</a></tr>";
           }
           echo "</table>";
-
-
           mysqli_close($link);
           ?>
         </div>

@@ -46,8 +46,8 @@ require_once "config.php";
             Tickets
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="myTickets.php" id="lol"  >My Tickets</a>
-              <a class="dropdown-item" href="ticketsOpen.php">Open Tickets</a>
+              <a class="dropdown-item" href="myTickets.php">My Tickets</a>
+              <a class="dropdown-item" href="TicketsOpen.php">Open Tickets</a>
               <a class="dropdown-item" href="tickets.php">All Tickets</a>
             </div>
           </li>
@@ -86,7 +86,7 @@ require_once "config.php";
       {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
       }
-          $result = mysqli_query($link,"SELECT * FROM tickets LEFT JOIN users on tickets.submitter = users.id;");
+          $result = mysqli_query($link,"SELECT * FROM tickets LEFT JOIN users on tickets.submitter = users.id where status='open';");
 
           Echo  "<table class='table table-sm'>";
           Echo      "<thead>";
